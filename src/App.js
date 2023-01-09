@@ -68,7 +68,7 @@ function ShowDoneTotal() {
   return (
     <div className="container">
       <div className='row mt-4'>
-        <div className='col-md-4'>
+        <div className='col-md-12'>
           <h1>Todo List</h1>
           Total {tasks.length}
           <p>Done {doneTotal}</p>
@@ -86,7 +86,7 @@ function ShowDoneTotal() {
         </div>
       </div>
       <div className='row mt-3'> 
-        <div className='col-md-4' >
+        <div className='col-md-12'>
           {
             tasks.map((e)=>(
               <div className="d-flex justify-content-between align-items-center mt-2">
@@ -98,10 +98,11 @@ function ShowDoneTotal() {
                   onChange={()=>onDoneTask(e.id)} 
                   />
                   <h4>{e.title}</h4>
+                  
                 </div>
-                <div>
-                  <button className='btn btn-warning'>Edit</button>
-                  <button className='btn btn-danger'>Delete</button>
+                <div className='row col-md-4 col-sm-4 col-5 justify-content-between'>
+                  <button className='btn btn-warning col-md-5 col-5 col-sm-5'>Edit</button>
+                  <button className='btn btn-danger col-md-6 col-5 col-sm-5' >Delete</button>
                 </div>
               </div>
             ))
